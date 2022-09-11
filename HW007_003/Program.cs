@@ -6,6 +6,8 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+void Average ()
+{
 void FillArray(double[,] array)
 {   for (int i = 0; i < array.GetLength(0); i++)
     {   for (int j = 0; j < array.GetLength(1); j++)
@@ -40,4 +42,5 @@ Console.WriteLine("=========================================================");
         sum = Math.Round(sum / massiv.GetLength(0), 1);
         Console.Write(sum + "\t");
     }
-
+}
+Average();
