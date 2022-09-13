@@ -10,6 +10,12 @@
 
 void Sortmassiv()
 {
+Console.WriteLine("Введите количество строк двумерного массива: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов  двумерного массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] massiv = new int[m, n];
+
 void Fillmassiv(int[,] massiv)
 {   for (int i = 0; i < massiv.GetLength(0); i++)
     {   for (int j = 0; j < massiv.GetLength(1); j++)
@@ -25,17 +31,8 @@ void Printmassiv(int[,] massiv)
             Console.WriteLine("");
     }
 }
-
-Console.WriteLine("Введите количество строк двумерного массива: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов  двумерного массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[,] massiv = new int[m, n];
-Console.WriteLine("=========================================================");
-Fillmassiv(massiv);
-Printmassiv(massiv);
-Console.WriteLine("=========================================================");
-
+void Sortmassiv(int[,] massiv)
+{
 int temp = 0;
 for (int k = 0; k < m; k++)
     {   for (int r = 0; r < n; r++)
@@ -50,11 +47,12 @@ for (int k = 0; k < m; k++)
             }
         }
     }
-for (int i = 0; i < m; i++)
-    {   for (int j = 0; j < n; j++)
-        Console.Write(massiv[i,j] + "\t");
-        {    Console.WriteLine("");
-        }
-    }
+}   
+Console.WriteLine("=========================================================");
+Fillmassiv(massiv);
+Printmassiv(massiv);
+Console.WriteLine("=========================================================");
+Sortmassiv(massiv);
+Printmassiv(massiv);
 }   
 Sortmassiv();
