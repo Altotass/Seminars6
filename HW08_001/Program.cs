@@ -5,12 +5,13 @@
 // 5 9 2 3                            9 5 3 2
 // 8 4 2 4                            8 4 4 2
 
+void ChangesNum()
+{
 Console.WriteLine("Введите количество строк двумерного массива: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов двумерного массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[,] massiv = new int[m, n];
-
 void Fillmassiv(int[,] massiv)
 {   for (int i = 0; i < massiv.GetLength(0); i++)
     {   for (int j = 0; j < massiv.GetLength(1); j++)
@@ -27,8 +28,7 @@ void Printmassiv(int[,] massiv)
     }
 }
 void Sortmassiv(int[,] massiv)
-{
-for (int k = 0; k < m; k++)
+{   for (int k = 0; k < m; k++)
     {   for (int r = 0; r < n; r++)
         {   for (int i = 0; i < m; i++)
             {   for (int j = 0; j < n ; j++)
@@ -48,3 +48,5 @@ Printmassiv(massiv);
 Console.WriteLine("=========================================================");
 Sortmassiv(massiv);
 Printmassiv(massiv);
+}
+ChangesNum();
